@@ -167,7 +167,7 @@ The fifth image might be difficult to classify because sign is a bit shifted bel
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. Identify where in your code predictions were made. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-The code for making predictions on my final model is located in the tenth cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 9th cell of the Ipython notebook.
 
 Here are the results of the prediction:
 
@@ -180,13 +180,13 @@ Here are the results of the prediction:
 | Speed limit (30km/h)			| Speed limit (30km/h)      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. Since new images are more clear than training set, So result is good.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the _ th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the 10 th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is relatively sure that this is a 'No entry' sign (probability of 1.0), and the image does contain a stop sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -196,7 +196,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 |2.12164e-23|Yield|
 |7.26148e-25|No passing for vehicles over 3.5 metric tons|
 
-For the second image ... 
+For the second image is a "Speed limit (60km/h)".
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -206,7 +206,7 @@ For the second image ...
 |2.02099e-17|Speed limit (30km/h)|
 |3.33016e-18|Children crossing|
 
-The third image
+The third image is a 'Children crossing'.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -216,7 +216,7 @@ The third image
 |3.21569e-20|General caution|
 |1.72647e-24|Pedestrians|
 
-The forth image
+The forth image is 'Stop'.
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -226,7 +226,8 @@ The forth image
 |4.64166e-24|No entry|
 |9.75392e-28|Speed limit (60km/h)|
 
-The fifth image
+The fifth image is 'Speed limit (30km/h)'
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 |1.0|Speed limit (30km/h)|
