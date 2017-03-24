@@ -137,22 +137,8 @@ My final model results were:
 * validation set accuracy of 0.931
 * test set accuracy of 0.928
 
-I just upgrade Lenet by adding one 1x1 convolution layer and expading filter size.
-I thought that basically Lenet model is enough for small 32x32 images. so I just expand filter size of convolution layers for detecting various edge types. And add one 1x1 convolution layer and expand output size of fully connected layers for making model a bit more complicated.
-
------------------------
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-----------------------
+I just upgrade LeNet by adding one 1x1 convolution layer and expading filter size.
+I thought that basically LeNet model is enough for small 32x32 images. so I just expand filter size of convolution layers for detecting various edge types. And add one 1x1 convolution layer and expand output size of fully connected layers to make the model a bit more complicated.
 
 ### Test a Model on New Images
 
