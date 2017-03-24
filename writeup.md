@@ -110,10 +110,10 @@ My final model consisted of the following layers:
 | Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x24 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x24 				|
-| Convolution 5x5     	| 1x1 stride, valid padding, outputs 10x10x48 	|
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 10x10x32 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 1x1     	| 1x1 stride, valid padding, outputs 16x16x48 	|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x32 				|
+| Convolution 1x1     	| 1x1 stride, valid padding, outputs 5x5x48 	|
 | RELU					|												|
 | Fully connected		| outputs 120        									|
 | Fully connected		| outputs 84   									|
@@ -125,7 +125,7 @@ My final model consisted of the following layers:
 #### 4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I use AdamOptimizer with learning rate = 0.001. It works well.
-Batch size is 128, and epoch = 100. I need a lot of iterations because I apply data augmentation function on original training data every epoch. As a result 100 epoch is 100 augmentation process x 1 epoch.
+Batch size is 128, and epoch = 40. I need a lot of iterations because I apply data augmentation function on original training data every epoch. As a result 40 epoch is 40 augmentation process x 1 epoch.
 The code for training the model is located in the 8th cell of the ipython notebook.
 
 #### 5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
@@ -133,9 +133,9 @@ The code for training the model is located in the 8th cell of the ipython notebo
 The code for calculating the accuracy of the model is located in the 8th cell of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of 
-* validation set accuracy of ?
-* test set accuracy of
+* training set accuracy of 0.993
+* validation set accuracy of 0.931
+* test set accuracy of 0.928
 
 I just upgrade Lenet by adding one 1x1 convolution layer and expading filter size.
 I thought that basically Lenet model is enough for small 32x32 images. so I just expand filter size of convolution layers for detecting various edge types. And add one 1x1 convolution layer and expand output size of fully connected layers for making model a bit more complicated.
@@ -184,29 +184,53 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the _th cell of the Ipython notebook.
+The code for making predictions on my final model is located in the _ th cell of the Ipython notebook.
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-
+|1.0|No entry|
+|2.05549e-07|Stop|
+|9.74034e-21|No passing|
+|2.12164e-23|Yield|
+|7.26148e-25|No passing for vehicles over 3.5 metric tons|
 
 For the second image ... 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
+|1.0|Speed limit (60km/h)|
+|9.24078e-13|Speed limit (80km/h)|
+|5.81425e-14|Speed limit (20km/h)|
+|2.02099e-17|Speed limit (30km/h)|
+|3.33016e-18|Children crossing|
 
 The third image
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
+|1.0|Children crossing|
+|7.90121e-16|Right-of-way at the next intersection|
+|1.48694e-19|Beware of ice/snow|
+|3.21569e-20|General caution|
+|1.72647e-24|Pedestrians|
 
 The forth image
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
+|1.0|Stop|
+|2.27482e-19|Yield|
+|6.41114e-21|Speed limit (30km/h)|
+|4.64166e-24|No entry|
+|9.75392e-28|Speed limit (60km/h)|
 
 The fifth image
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
+|1.0|Speed limit (30km/h)|
+|1.15148e-16|Speed limit (70km/h)|
+|1.94507e-18|Speed limit (20km/h)|
+|4.56686e-22|Speed limit (50km/h)|
+|1.07774e-22|Speed limit (100km/h)|
